@@ -36,43 +36,30 @@
   .top-info p {
     text-align: center;
     font-size: 1.1em;
-    width: 100%;
+    width: 80%;
     margin: auto;
     margin-bottom: 8%;
     color: #8a8a8a;
   }
 
-/* HR Design: Glyph, by Harry Roberts */
-
 #topline {
-  overflow: visible; /* For IE */
-  padding: 0;
-  border: none;
-  border-top: medium double #333;
-  color: #333;
-  text-align: center;
-  margin: 0px;
-}
-#topline:after {
-  content: "♦";
-  display: inline-block;
-  position: relative;
-  top: -0.7em;
-  font-size: 1.5em;
-  padding: 0 0.25em;
-  background: white;
+  border-top: solid 5px black;
+  border-bottom: solid 2px black;
+  border-left: none;
+  border-right: none;
+  height: 12px;
+  width: 90%;
 }
 
 #bottomline {
-  border: 0;
-  height: 1px;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  display: block;
+  border: solid 2px black;
+  max-width: 90%;
 }
 
 h3.contact {
   font-size: 1.5em;
   color: rgb(58, 58, 58);
-  margin-top: 5px;
 }
 
   form {
@@ -133,61 +120,6 @@ h3.contact {
     box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
     margin-bottom: 30px;
   }
-
-    /* Minimal Select Menu Arrow Style by Veiko https://codepen.io/vkjgr/pen/VYMeXp */
-
-  select {
-    border-radius: 4px;
-    display: inline-block;
-    font: inherit;
-    line-height: 1.5em;
-    padding: 0.5em 3.5em 0.5em 1em;
-
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-  }
-
- select.select-menu {
-  background-image:
-    linear-gradient(45deg, transparent 50%, gray 50%),
-    linear-gradient(135deg, gray 50%, transparent 50%),
-    linear-gradient(to right, #ccc, #ccc);
-  background-position:
-    calc(100% - 20px) calc(1em + 2px),
-    calc(100% - 15px) calc(1em + 2px),
-    calc(100% - 2.5em) 0.5em;
-  background-size:
-    5px 5px,
-    5px 5px,
-    1px 1.5em;
-  background-repeat: no-repeat;
-}
-
-select.select-menu:focus {
-  background-image:
-    linear-gradient(45deg, gray 50%, transparent 50%),
-    linear-gradient(135deg, transparent 50%, gray 50%),
-    linear-gradient(to right, #ccc, #ccc);
-  background-position:
-    calc(100% - 15px) 1em,
-    calc(100% - 20px) 1em,
-    calc(100% - 2.5em) 0.5em;
-  background-size:
-    5px 5px,
-    5px 5px,
-    1px 1.5em;
-  background-repeat: no-repeat;
-  outline: 0;
-  border: 2px  solid rgb(166, 246, 240);
-}
-
-select:-moz-focusring {
-  color: transparent;
-  text-shadow: 0 0 0 #000;
-}
 
 input[type="radio"],
 input[type="checkbox"] {
@@ -277,6 +209,20 @@ input, select {
   .wrapper {
     max-width: 1000px;
     margin: auto;
+  }
+
+  #topline {
+  margin-bottom: 50px;
+  width: 100%;
+  }
+
+  #bottomline {
+    max-width: 100%;
+  }
+
+  h3.contact {
+    margin: 5px 0px 50px 0px;
+
   }
 
   .top .box {
