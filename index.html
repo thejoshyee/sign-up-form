@@ -19,23 +19,34 @@
         <hr id="topline">
             <form action="index.html" method="post">
               <fieldset class="top">
-                <legend>Contact Information</legend>
-
+                <legend><h3 class="contact">Contact Information</h3></legend>
+                  
+                <div class="box">
                   <label for="name">Full Name</label>
-                  <input type="text" id="name" name="user_name">
-                
+                  <input type="text" id="name" name="user_name" placeholder="Required" required>
+                </div>
+
+                <div class="box">
                   <label for="email">Email Address</label>
-                  <input type="email" id="email" name="user_email">
+                  <input type="email" id="email" name="user_email" placeholder="Required" required>
+                </div>
 
+                <div class="box">
                   <label for="phone">Phone Number</label>
-                  <input type="text" id="phone" name="user_name">
+                  <input type="text" id="phone" name="user_name" placeholder="(111) 111-1111">
+                </div>
 
+                <div class="box">
                   <label for="address">Street Address</label>
-                  <input type="text" id="address" name="user_name">
-                
+                  <input type="text" id="address" name="user_name" placeholder="Optional">
+                </div>
+
+                <div class="box">
                   <label for="city">City</label>
-                  <input type="text" id="city" name="user_name">
-                
+                  <input type="text" id="city" name="user_name" placeholder="Optional">
+                </div>
+
+                <div class="box">
                   <label for="state">State</label>
                     <select class="select-menu" id="state" name="user_state">
                       <option disabled selected value>Choose State</option>
@@ -91,31 +102,48 @@
                       <option value="WI">Wisconsin</option>
                       <option value="WY">Wyoming</option>
                     </select>	
-                  
+                  </div>
+
+                <div class="box">
                   <label for="zip">Zip Code</label>
-                  <input type="text" id="zip" name="user_name">
+                  <input type="text" id="zip" name="user_zip" class="zip-code" placeholder="Optional">
+                </div>
+
             </fieldset>
 
             <hr id="bottomline">
 
             <fieldset class="bottom">
-                <legend>Newsletter</legend>
-                  <label>Select the newsletters you would like to receive:</label>
-                 
-                      <input type="checkbox" id="html-news" value="newsletter_html" name="user_newsletter"><label class="news-type" for="html">HTML News</label>
+                <legend><h3 class="newsletter">Newsletter</h3></legend>
+                  <label class="newsletter-select">Select the newsletters you would like to receive:</label>
+                    <div class="box">
+                      <input type="checkbox" id="html-news" name="user_newsletter">
+                      <label class="news-type" for="html-news">HTML News</label>
+                    </div>
 
-                      <input type="checkbox" id="css" value="newsletter_css" name="user_newsletter"><label class="news-type" for="css">CSS News</label>
+                    <div class="box">
+                      <input type="checkbox" id="css" name="user_newsletter">
+                      <label class="news-type" for="css">CSS News</label>
+                    </div>
 
-                      <input type="checkbox" id="javascript" value="newsletter_javascript" name="user_newsletter"><label class="news-type" for="javascript">Javascript News</label>
-
+                    <div class="box">
+                      <input type="checkbox" id="javascript" value="newsletter_javascript" name="user_newsletter">
+                      <label class="news-type" for="javascript">Javascript News</label>
+                    </div>
 
                   <label class="text">Newsletter format</label>
                   
-                    <input type="radio" id="html-format" name="user_format"><label for="html-format" class="news-type">HTML</label>
+                  <div class="box">
+                    <input type="radio" id="html-format" name="user_format">
+                    <label for="html-format" class="news-type">HTML</label>
+                  </div>
 
-                    <input type="radio" id="plain-format" name="user_format"><label for="plain-html" class="news-type">Plain Text</label>
+                  <div class="box">
+                    <input type="radio" id="plain-format" name="user_format">
+                    <label for="plain-format" class="news-type">Plain Text</label>
+                  </div>
 
-                  <label class="text" for="other-topics">Other topics you'd like to hear about</label>
+                  <label class="text" for="other-topics">Other topics you'd like to hear about:</label>
 
                   <textarea id="other-topics" name="other_topics"></textarea>
 

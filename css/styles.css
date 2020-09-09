@@ -2,68 +2,303 @@
 * { 
     box-sizing: border-box;
     font-family: 'Merriweather', serif;
-
+    border: none;
   }
   
-  /* Header Styles */
-
-
- 
   /* Main Styles */
 
+  body {
+    margin: 0;
+  }
+
+  header {
+    background: rgb(58, 58, 58);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  .top-info h2 {
+    margin: auto;
+    margin-bottom: 3%;
+    font-size: 1.4em;
+    text-align: center;
+    padding-top: 25px;
+    color: rgb(58, 58, 58);
+    width: 100%;
+  }
+
+  .top-info p {
+    text-align: center;
+    font-size: 1.1em;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 8%;
+    color: #8a8a8a;
+  }
+
+/* HR Design: Glyph, by Harry Roberts */
+
+#topline {
+  overflow: visible; /* For IE */
+  padding: 0;
+  border: none;
+  border-top: medium double #333;
+  color: #333;
+  text-align: center;
+  margin: 0px;
+}
+#topline:after {
+  content: "♦";
+  display: inline-block;
+  position: relative;
+  top: -0.7em;
+  font-size: 1.5em;
+  padding: 0 0.25em;
+  background: white;
+}
+
+#bottomline {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+h3.contact {
+  font-size: 1.5em;
+  color: rgb(58, 58, 58);
+  margin-top: 5px;
+}
+
   form {
+    width: 100%;
+  }
+
+  .field {
     display: flex;
     flex-direction: column;
   }
 
+  .top input[required] {
+    text-align: right;
+    font-style: italic;
+  }
+
   label {
-    display: block;
     margin-bottom: 8px;
-  }
-
-  button {
+    color: #8a8a8a;
     display: block;
   }
 
-  input[type="text"],
+  label[for="zip"] {
+    display: flex;
+  }
+
+.news-type {
+  display: inline-block;
+}
+
+#zip {
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  height: auto;
+  outline: 0;
+  padding: 15px;
+  width: 50%;
+  background-color: #eeeeee;
+  color: #8a97a0;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+  margin-bottom: 30px;
+  }
+
+  input[type="text"], [type="email"],
   textarea,
   select {
     border: none;
+    border-radius: 4px;
     font-size: 16px;
     height: auto;
     margin: 0;
     outline: 0;
     padding: 15px;
     width: 100%;
-    background-color: #e8eeef;
+    background-color: #eeeeee;
     color: #8a97a0;
     box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
     margin-bottom: 30px;
   }
 
+    /* Minimal Select Menu Arrow Style by Veiko https://codepen.io/vkjgr/pen/VYMeXp */
+
+  select {
+    border-radius: 4px;
+    display: inline-block;
+    font: inherit;
+    line-height: 1.5em;
+    padding: 0.5em 3.5em 0.5em 1em;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+
+ select.select-menu {
+  background-image:
+    linear-gradient(45deg, transparent 50%, gray 50%),
+    linear-gradient(135deg, gray 50%, transparent 50%),
+    linear-gradient(to right, #ccc, #ccc);
+  background-position:
+    calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px),
+    calc(100% - 2.5em) 0.5em;
+  background-size:
+    5px 5px,
+    5px 5px,
+    1px 1.5em;
+  background-repeat: no-repeat;
+}
+
+select.select-menu:focus {
+  background-image:
+    linear-gradient(45deg, gray 50%, transparent 50%),
+    linear-gradient(135deg, transparent 50%, gray 50%),
+    linear-gradient(to right, #ccc, #ccc);
+  background-position:
+    calc(100% - 15px) 1em,
+    calc(100% - 20px) 1em,
+    calc(100% - 2.5em) 0.5em;
+  background-size:
+    5px 5px,
+    5px 5px,
+    1px 1.5em;
+  background-repeat: no-repeat;
+  outline: 0;
+  border: 2px  solid rgb(166, 246, 240);
+}
+
+select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #000;
+}
 
 input[type="radio"],
 input[type="checkbox"] {
   margin: 0 4px 8px 0;
 }
 
+#bottom-line {
+  margin-bottom: 20px;
+}
 
-fieldset {
-  margin-bottom: 30px;
-  border: none;
+input:focus {
+border: 2px  solid rgb(166, 246, 240);
+transition: .5s;
+background: rgb(255, 255, 246);
+}
+
+#zip:focus {
+border: 2px  solid rgb(166, 246, 240);
+transition: .5s;
+background: rgb(255, 255, 246);
+}
+
+#other-topics:focus {
+  border: 2px  solid rgb(166, 246, 240);
+  transition: .5s;
+  background: rgb(255, 255, 246);
+  }
+
+div .box {
+  padding-bottom: 10px;
+}
+
+h3.newsletter {
+  padding-bottom: 5px;
+  margin: 25px 0 10px 0;
+  font-size: 1.5em;
+}
+
+.newsletter-select {
+  padding-bottom: 10px;
+  display: block;
+}
+
+.text {
+  padding: 10px 0 10px 0;
+  display: block;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  padding: 19px 39px 18px 39px;
+  color: #FFF;
+  background-color: rgb(58, 58, 58);
+  font-size: 18px;
+  text-align: center;
+  font-style: normal;
+  border-radius: 5px;
+  width: 100%;
+  border-width: 1px 1px 3px;
+  margin-bottom: 10px;
+  transition: 1s;
+}
+
+button:focus {
+  background-color: #80c8ff; 
+  transition: .8s;
+}
+
+#copyright {
+  text-align: center;
+  padding: 25px;
+  font-style: italic;
+}
+
+input, select {
+  transition-duration: 1s;
+  flex: 1;
+  text-align: left;
 }
 
 
-
-
-  /* Styles for larger screens */
+/* Styles for larger screens */
 
   @media (min-width: 768px) {
 
+  .wrapper {
+    max-width: 1000px;
+    margin: auto;
+  }
 
+  .top .box {
+    display: flex;
+  }
 
+  .top label {
+    flex: 0 1 200px;
+    }
 
+  #zip {
+    max-width: 25%;
+    transition-duration: 1s;
+     }
 
+  .top-info p {
+    margin-bottom: 60px;
+  } 
 
-  
+  .top-info h2 {
+    font-size: 2em;
+    margin: 30px 0 15px 0;
+  }
+
 }
