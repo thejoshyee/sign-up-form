@@ -91,7 +91,7 @@ h3.contact {
 }
 
 #zip {
-  border: none;
+  border: transparent;
   border-radius: 4px;
   font-size: 16px;
   height: auto;
@@ -104,10 +104,10 @@ h3.contact {
   margin-bottom: 30px;
   }
 
-  input[type="text"], [type="email"],
+  input[type="text"], [type="email"], [type="tel"],
   textarea,
   select {
-    border: none;
+    border: transparent;
     border-radius: 4px;
     font-size: 16px;
     height: auto;
